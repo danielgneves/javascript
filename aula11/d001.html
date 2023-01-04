@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>De que país você é?</h1>
+    <p>
+        <label for="pais">Digite seu país natal:</label>
+        <input type="text" name="pais" id="pais">
+    </p>
+    <p>
+        <input type="button" value="ir" onclick="calc()">
+    </p>
+    <div id="res">resultado</div>
+
+    <script>
+        function calc() {
+            var pais = document.getElementById('pais')
+            var p = String(pais.value)
+            var res = document.getElementById('res')
+            res.innerText = `Você mora no ${p}`
+            if (p != 'Brasil') {
+                res.innerHTML += '<p>Você é estrangeiro!</p>'
+            } else {
+                res.innerHTML += '<p>Você é brasileiro!</p>'
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>
