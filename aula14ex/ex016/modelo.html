@@ -9,12 +9,30 @@
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Vamos contar</h1>
     </header>
     <main>
         <section>
-            <div>Testando...</div>
-            <div>Olá!</div>
+            <div id="dados">
+                <p>
+                    <label for="ini">Inicio: </label>
+                    <input type="number" name="inicio" id="txti">
+                </p>
+                <p>
+                    <label for="fim">Fim: </label>
+                    <input type="number" name="fim" id="txtf">
+                </p>
+                <p>
+                    <label for="pas">Passo: </label>
+                    <input type="number" name="passo" id="txtp">
+                </p>
+                <p>
+                    <input type="button" value="contar" onclick="contar()">
+                </p>
+            </div>
+            <div id="res">
+                Preparando a contagem...
+            </div>
         </section>
     </main>
     <footer>
